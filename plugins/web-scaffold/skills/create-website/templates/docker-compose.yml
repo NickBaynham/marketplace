@@ -1,0 +1,31 @@
+# Local infra for {{site_name}}.
+# Run `make configure` first to create backend/.env from backend/.env.example.
+# Database is commented out by default — uncomment if the backend needs persistence.
+
+services:
+  # postgres:
+  #   image: postgres:16
+  #   environment:
+  #     POSTGRES_USER: app
+  #     POSTGRES_PASSWORD: app
+  #     POSTGRES_DB: app
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: ./backend/.env
+        required: false
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+    # depends_on:
+    #   - postgres
+
+# volumes:
+#   postgres_data:

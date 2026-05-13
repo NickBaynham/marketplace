@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Cache npm
+        if: hashFiles('frontend/package-lock.json') != ''
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('frontend/package-lock.json') }}
+      - name: Install (deterministic if lockfile present)
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            echo "No package-lock.json yet; run 'make setup' locally and commit the lockfile."
+            npm install --no-audit --no-fund
+          fi
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test
+      - run: npm run build
+
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pdm
+        run: pip install pdm
+      - name: Resolve and install
+        run: |
+          if [ ! -f pdm.lock ]; then
+            echo "No pdm.lock yet; resolving fresh. Run 'cd backend && pdm lock' locally and commit the lockfile for reproducible builds."
+            pdm lock
+          fi
+          pdm install -G dev
+      - run: pdm run lint
+      - run: pdm run typecheck
+      - run: pdm run test

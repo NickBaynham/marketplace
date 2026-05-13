@@ -1,0 +1,21 @@
+{
+  "name": "web-scaffold",
+  "version": "0.1.0",
+  "description": "Scaffold a Next.js + FastAPI website deployable to AWS Amplify (frontend) and AWS App Runner (backend) with a Route 53 domain and HTTPS.",
+  "author": {
+    "name": "Nick Baynham",
+    "email": "nickbaynham@gmail.com"
+  },
+  "homepage": "https://github.com/NickBaynham/marketplace/tree/main/plugins/web-scaffold",
+  "repository": "https://github.com/NickBaynham/marketplace",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "nextjs",
+    "fastapi",
+    "aws-amplify",
+    "app-runner",
+    "route53",
+    "scaffold",
+    "website"
+  ]
+}

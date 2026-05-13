@@ -1,0 +1,22 @@
+# AWS Amplify Hosting build specification for the Next.js frontend.
+# The project is a monorepo: frontend/ + backend/. Amplify only builds frontend/.
+# In the Amplify console, set the monorepo "appRoot" to: frontend
+version: 1
+applications:
+  - appRoot: frontend
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: .next
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - node_modules/**/*
+          - .next/cache/**/*

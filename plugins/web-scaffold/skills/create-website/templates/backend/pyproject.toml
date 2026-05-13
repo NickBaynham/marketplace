@@ -1,0 +1,45 @@
+[project]
+name = "{{site_name_slug}}-backend"
+version = "0.1.0"
+description = "FastAPI backend for {{site_name}}."
+authors = [{ name = "{{company}}" }]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic[email]>=2.7",
+    "pydantic-settings>=2.4",
+    "httpx>=0.27",
+    "slowapi>=0.1.9",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.6",
+    "mypy>=1.10",
+]
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+dev = "uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+start = "uvicorn app.main:app --host 0.0.0.0 --port 8000"
+test = "pytest"
+lint = "ruff check ."
+typecheck = "mypy src"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"

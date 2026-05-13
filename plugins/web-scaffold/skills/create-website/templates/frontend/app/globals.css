@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-accent: {{accent_color}};
+  --color-accent-strong: color-mix(in oklch, {{accent_color}} 80%, black);
+  --color-accent-muted: color-mix(in oklch, {{accent_color}} 40%, white);
+
+  --color-bg: #ffffff;
+  --color-bg-elevated: #f7f7f8;
+  --color-surface-muted: #eef0f3;
+  --color-text: #111418;
+  --color-text-muted: #4b5563;
+  --color-border: #e5e7eb;
+  --color-heading: #0b1220;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Source Serif 4", ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --spacing-page: 1.5rem;
+  --radius-button: 9999px;
+  --radius-card: 1rem;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+.prose {
+  --tw-prose-headings: var(--color-heading);
+  --tw-prose-body: var(--color-text);
+  --tw-prose-links: var(--color-accent-strong);
+  --tw-prose-bold: var(--color-heading);
+  --tw-prose-quotes: var(--color-text-muted);
+}
