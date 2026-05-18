@@ -11,6 +11,12 @@
       "source": "./plugins/web-scaffold",
       "version": "0.1.0",
       "description": "Scaffold a Next.js + FastAPI website deployable to AWS Amplify (frontend) and AWS App Runner (backend) with a Route 53 domain and HTTPS."
+    },
+    {
+      "name": "business-requirements",
+      "source": "./plugins/business-requirements",
+      "version": "0.1.0",
+      "description": "Senior Business Requirements Analyst for AI-augmented quality intelligence, document intelligence, and agentic automation platforms. Converts rough ideas into structured, testable, implementation-ready requirements."
     }
   ]
 }

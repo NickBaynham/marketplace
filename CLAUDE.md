@@ -22,6 +22,7 @@ A Claude Code session pulls a plugin or skill from this repo and registers it lo
 | Plugin | Skill | Purpose |
 |---|---|---|
 | [`web-scaffold`](plugins/web-scaffold/) | [`create-website`](plugins/web-scaffold/skills/create-website/SKILL.md) | Scaffold a Next.js + FastAPI website with Amplify + App Runner deploy targets, Route 53 + HTTPS. |
+| [`business-requirements`](plugins/business-requirements/) | [`analyze-requirements`](plugins/business-requirements/skills/analyze-requirements/SKILL.md) | Senior Business Requirements Analyst for AI-augmented quality intelligence work. Also ships `/brd` and a `business-analyst` sub-agent. |
 
 ## Status
 

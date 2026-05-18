@@ -1,0 +1,22 @@
+{
+  "name": "business-requirements",
+  "version": "0.1.0",
+  "description": "Senior Business Requirements Analyst for AI-augmented quality intelligence, document intelligence, and agentic automation platforms. Converts rough ideas into structured, testable, implementation-ready requirements.",
+  "author": {
+    "name": "Nick Baynham",
+    "email": "nickbaynham@gmail.com"
+  },
+  "homepage": "https://github.com/NickBaynham/marketplace/tree/main/plugins/business-requirements",
+  "repository": "https://github.com/NickBaynham/marketplace",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "business-requirements",
+    "requirements-analysis",
+    "quality-intelligence",
+    "agentic-automation",
+    "ai-testing",
+    "product-strategy",
+    "qa",
+    "sdlc"
+  ]
+}
