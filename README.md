@@ -14,7 +14,8 @@ marketplace/
 ├── LICENSE
 └── plugins/
     ├── web-scaffold/            scaffolds a Next.js + FastAPI website
-    └── business-requirements/   senior BA for AI-augmented quality intelligence work
+    ├── business-requirements/   senior BA for AI-augmented quality intelligence work
+    └── logical-consistency/     internal logic / fallacy / contradiction audit for documents
 ```
 
 A plugin is a self-contained directory under `plugins/` with its own `.claude-plugin/plugin.json` and a `skills/<skill-name>/SKILL.md` for each skill it exposes.
@@ -98,6 +99,48 @@ Delegate BA work from a main agent when you need a senior BA voice on a focused 
 - [implementation-handoff-mode.md](plugins/business-requirements/skills/analyze-requirements/references/implementation-handoff-mode.md)
 - [vocabulary.md](plugins/business-requirements/skills/analyze-requirements/references/vocabulary.md) — preferred Quality Intelligence Platform terms
 - [platform-context.md](plugins/business-requirements/skills/analyze-requirements/references/platform-context.md) — default platform inputs, outputs, agent workflows
+
+### logical-consistency
+
+Status: 0.1.0
+
+A plugin that audits a document — or a set of documents — for **internal** logical consistency: contradictions, common logical fallacies, undefined or equivocated terms, and invalid inference forms. Works on software requirements (BRD, SRS, PRD, spec), design documents and RFCs, essays and blog posts, policies, and contracts. It ships one skill, one slash command, and one sub-agent.
+
+#### Skill: `check-logical-consistency`
+
+A senior logic and argument auditor focused on whether a document reasons soundly from its own stated premises. It is not a fact-checker against the outside world, not a copy editor, and not a code reviewer.
+
+**When to invoke.** Ask Claude to "check this for consistency", "audit the logic of…", "find contradictions in…", "review this BRD/spec/essay for logical issues", "is this argument sound", or "are these requirements consistent". The skill does *not* trigger for grammar or style edits, external fact-checking, opinion review, or pure code review.
+
+**What it produces.** A Logical Consistency Report with ten sections: summary verdict, documents reviewed, central claims extracted, contradictions, logical fallacies, informal logic issues (undefined terms, terminological drift, equivocation setup, missing premises, unsupported claims, scope drift, numerical inconsistencies, internal citation drift), inference errors, severity summary (Blocker / Major / Minor / Nit), recommended repair order, and out-of-scope items noted.
+
+Each finding contains ID, type, location, verbatim quote, a one- or two-sentence explanation, a concrete repair, and a severity rating.
+
+**Three analysis passes.**
+
+- **Formal logic** — direct contradictions, incompatible constraints, quantifier errors, modal and deontic conflicts, temporal cycles, definitional contradictions, invalid inference forms.
+- **Logical fallacies** — equivocation, begging the question, false dichotomy, hasty generalization, appeals to authority / popularity / nature / tradition, slippery slope, straw man, composition / division, post hoc, no true Scotsman, cherry picking, appeal to ignorance, loaded question, genetic fallacy, and more.
+- **Informal logic** — undefined or under-defined load-bearing terms, terminological drift, equivocation setup, missing premises, unsupported claims, scope drift, numerical inconsistencies, internal citation drift.
+
+**Operating principle.** The skill applies the principle of charity before flagging any finding and refuses to invent contradictions to look thorough. A clean document earns a short "no significant findings" report.
+
+#### Slash command: `/logic-check <input>`
+
+Direct invocation. The input can be one or more file paths or pasted prose. Produces the report inline unless the user asks to save it.
+
+#### Sub-agent: `logic-auditor`
+
+Delegate a logical-consistency review from a main agent when you need an audit on a substantial document without consuming the main context window.
+
+**Deeper documentation.**
+
+- [Plugin README](plugins/logical-consistency/README.md)
+- [SKILL.md](plugins/logical-consistency/skills/check-logical-consistency/SKILL.md) — full skill instructions and trigger rules
+- [formal-logic.md](plugins/logical-consistency/skills/check-logical-consistency/references/formal-logic.md) — propositional, quantifier, modal, deontic, temporal, and inference checks
+- [fallacies.md](plugins/logical-consistency/skills/check-logical-consistency/references/fallacies.md) — catalog of common fallacies with detection patterns and examples
+- [informal-logic.md](plugins/logical-consistency/skills/check-logical-consistency/references/informal-logic.md) — undefined terms, drift, missing premises, scope and citation issues
+- [document-types.md](plugins/logical-consistency/skills/check-logical-consistency/references/document-types.md) — emphasis per document type
+- [output-template.md](plugins/logical-consistency/skills/check-logical-consistency/references/output-template.md) — canonical report structure
 
 ## Conventions
 

@@ -1,0 +1,23 @@
+{
+  "name": "logical-consistency",
+  "version": "0.1.0",
+  "description": "Check a document or set of documents for internal logical consistency using formal logic, common logical fallacies, and informal reasoning checks. Works on software requirements, design documents, blog posts, essays, contracts, and policy text.",
+  "author": {
+    "name": "Nick Baynham",
+    "email": "nickbaynham@gmail.com"
+  },
+  "homepage": "https://github.com/NickBaynham/marketplace/tree/main/plugins/logical-consistency",
+  "repository": "https://github.com/NickBaynham/marketplace",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "logic",
+    "logical-consistency",
+    "formal-logic",
+    "fallacies",
+    "requirements-review",
+    "document-review",
+    "reasoning",
+    "argument-analysis",
+    "editorial-review"
+  ]
+}

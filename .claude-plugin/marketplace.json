@@ -17,6 +17,12 @@
       "source": "./plugins/business-requirements",
       "version": "0.1.0",
       "description": "Senior Business Requirements Analyst for AI-augmented quality intelligence, document intelligence, and agentic automation platforms. Converts rough ideas into structured, testable, implementation-ready requirements."
+    },
+    {
+      "name": "logical-consistency",
+      "source": "./plugins/logical-consistency",
+      "version": "0.1.0",
+      "description": "Check a document or set of documents for internal logical consistency using formal logic, common logical fallacies, and informal reasoning checks. Works on software requirements, design documents, RFCs, blog posts, essays, contracts, and policy text."
     }
   ]
 }
