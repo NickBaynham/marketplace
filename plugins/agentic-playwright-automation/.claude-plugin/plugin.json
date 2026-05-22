@@ -1,0 +1,23 @@
+{
+  "name": "agentic-playwright-automation",
+  "version": "0.1.0",
+  "description": "Convert approved BDD specs, Markdown behavior specs, automation candidate reports, user stories, and acceptance criteria into maintainable Python Playwright/PyTest automation inside a standardized framework. Scaffolds the framework, generates tests, page objects, components, fixtures, data models, and test data, reviews existing automation, and investigates failures. Does not introduce Cucumber/Behave in v0.1.",
+  "author": {
+    "name": "Nick Baynham",
+    "email": "nickbaynham@gmail.com"
+  },
+  "homepage": "https://github.com/NickBaynham/marketplace/tree/main/plugins/agentic-playwright-automation",
+  "repository": "https://github.com/NickBaynham/marketplace",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "playwright",
+    "pytest",
+    "python",
+    "automation",
+    "page-object",
+    "fixtures",
+    "bdd",
+    "qa",
+    "sdet"
+  ]
+}

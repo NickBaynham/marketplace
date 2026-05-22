@@ -23,6 +23,24 @@
       "source": "./plugins/logical-consistency",
       "version": "0.1.0",
       "description": "Check a document or set of documents for internal logical consistency using formal logic, common logical fallacies, and informal reasoning checks. Works on software requirements, design documents, RFCs, blog posts, essays, contracts, and policy text."
+    },
+    {
+      "name": "mcp-exploratory-testing",
+      "source": "./plugins/mcp-exploratory-testing",
+      "version": "0.1.0",
+      "description": "Drive Playwright MCP through bounded exploratory testing of a live web application and produce structured exploration session reports, page observations, action timelines, anomaly reports, candidate test ideas, and candidate page models. Does not generate BDD specs or Playwright/PyTest automation code in v0.1."
+    },
+    {
+      "name": "exploratory-to-bdd",
+      "source": "./plugins/exploratory-to-bdd",
+      "version": "0.1.0",
+      "description": "Convert exploratory testing notes, Playwright MCP exploration sessions, user stories, and acceptance criteria into reviewable Markdown BDD specs, Gherkin .feature files, traceability matrices, automation candidate reviews, and BDD quality reviews. Does not generate Playwright/PyTest automation code in v0.1."
+    },
+    {
+      "name": "agentic-playwright-automation",
+      "source": "./plugins/agentic-playwright-automation",
+      "version": "0.1.0",
+      "description": "Convert approved BDD specs, Markdown behavior specs, automation candidate reports, user stories, and acceptance criteria into maintainable Python Playwright/PyTest automation inside a standardized framework. Scaffolds the framework, generates tests, page objects, components, fixtures, data models, and test data, reviews existing automation, and investigates failures. Does not introduce Cucumber/Behave in v0.1."
     }
   ]
 }

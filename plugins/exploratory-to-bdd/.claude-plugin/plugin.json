@@ -1,0 +1,22 @@
+{
+  "name": "exploratory-to-bdd",
+  "version": "0.1.0",
+  "description": "Convert exploratory testing notes, Playwright MCP exploration sessions, user stories, and acceptance criteria into reviewable Markdown BDD specs, Gherkin .feature files, traceability matrices, automation candidate reviews, and BDD quality reviews. Does not generate Playwright/PyTest automation code in v0.1.",
+  "author": {
+    "name": "Nick Baynham",
+    "email": "nickbaynham@gmail.com"
+  },
+  "homepage": "https://github.com/NickBaynham/marketplace/tree/main/plugins/exploratory-to-bdd",
+  "repository": "https://github.com/NickBaynham/marketplace",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "bdd",
+    "gherkin",
+    "exploratory-testing",
+    "playwright-mcp",
+    "test-design",
+    "traceability",
+    "qa",
+    "sdet"
+  ]
+}

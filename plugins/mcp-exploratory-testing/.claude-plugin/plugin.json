@@ -1,0 +1,22 @@
+{
+  "name": "mcp-exploratory-testing",
+  "version": "0.1.0",
+  "description": "Drive Playwright MCP through bounded exploratory testing of a live web application and produce structured exploration session reports, page observations, action timelines, anomaly reports, candidate test ideas, and candidate page models. Does not generate BDD specs or Playwright/PyTest automation code in v0.1.",
+  "author": {
+    "name": "Nick Baynham",
+    "email": "nickbaynham@gmail.com"
+  },
+  "homepage": "https://github.com/NickBaynham/marketplace/tree/main/plugins/mcp-exploratory-testing",
+  "repository": "https://github.com/NickBaynham/marketplace",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "exploratory-testing",
+    "playwright-mcp",
+    "browser-automation",
+    "session-based-testing",
+    "anomaly-tracking",
+    "test-design",
+    "qa",
+    "sdet"
+  ]
+}
