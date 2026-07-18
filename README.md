@@ -14,6 +14,7 @@ marketplace/
 ├── LICENSE
 └── plugins/
     ├── web-scaffold/            scaffolds a Next.js + FastAPI website
+    ├── astro-content-site/      builds a content-driven static site on Astro + Amplify + S3
     ├── business-requirements/   senior BA for AI-augmented quality intelligence work
     └── logical-consistency/     internal logic / fallacy / contradiction audit for documents
 ```

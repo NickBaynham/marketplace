@@ -13,6 +13,12 @@
       "description": "Scaffold a Next.js + FastAPI website deployable to AWS Amplify (frontend) and AWS App Runner (backend) with a Route 53 domain and HTTPS."
     },
     {
+      "name": "astro-content-site",
+      "source": "./plugins/astro-content-site",
+      "version": "0.1.0",
+      "description": "Build and launch a content-driven static website (artist, creator, portfolio, resource hub) with Astro content collections, AWS Amplify hosting, S3-backed media streaming and gated downloads, a zero-backend mailing-list gate, and a phased TDD delivery process verified by production E2E tests. Includes a battle-tested pitfalls catalog."
+    },
+    {
       "name": "business-requirements",
       "source": "./plugins/business-requirements",
       "version": "0.1.0",

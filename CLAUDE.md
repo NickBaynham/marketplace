@@ -22,6 +22,7 @@ A Claude Code session pulls a plugin or skill from this repo and registers it lo
 | Plugin | Skill | Purpose |
 |---|---|---|
 | [`web-scaffold`](plugins/web-scaffold/) | [`create-website`](plugins/web-scaffold/skills/create-website/SKILL.md) | Scaffold a Next.js + FastAPI website with Amplify + App Runner deploy targets, Route 53 + HTTPS. |
+| [`astro-content-site`](plugins/astro-content-site/) | [`create-astro-content-site`](plugins/astro-content-site/skills/create-astro-content-site/SKILL.md) | Build and launch a content-driven static site (artist/creator/portfolio) on Astro + Amplify + S3: content collections, streaming, gated downloads, zero-backend mailing list, phased TDD delivery with production E2E gates, plus a pitfalls catalog distilled from a real build. |
 | [`business-requirements`](plugins/business-requirements/) | [`analyze-requirements`](plugins/business-requirements/skills/analyze-requirements/SKILL.md) | Senior Business Requirements Analyst for AI-augmented quality intelligence work. Also ships `/brd` and a `business-analyst` sub-agent. |
 | [`logical-consistency`](plugins/logical-consistency/) | [`check-logical-consistency`](plugins/logical-consistency/skills/check-logical-consistency/SKILL.md) | Audit a document or set of documents for internal logical consistency — contradictions, fallacies, undefined or equivocated terms, invalid inferences. Also ships `/logic-check` and a `logic-auditor` sub-agent. |
 

@@ -1,0 +1,24 @@
+{
+  "name": "astro-content-site",
+  "version": "0.1.0",
+  "description": "Build and launch a content-driven static website (artist, creator, portfolio, resource hub) with Astro content collections, AWS Amplify hosting, S3-backed media streaming and gated downloads, a zero-backend mailing-list gate, and a phased TDD delivery process verified by production E2E tests.",
+  "author": {
+    "name": "Nick Baynham",
+    "email": "nickbaynham@gmail.com"
+  },
+  "homepage": "https://github.com/NickBaynham/marketplace/tree/main/plugins/astro-content-site",
+  "repository": "https://github.com/NickBaynham/marketplace",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "astro",
+    "content-collections",
+    "aws-amplify",
+    "s3",
+    "static-site",
+    "artist-website",
+    "email-gate",
+    "playwright",
+    "seo",
+    "audio-streaming"
+  ]
+}
